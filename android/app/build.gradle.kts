@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.gamified_english_app"
-    compileSdk = 34 // 👈 تم التعديل هنا إلى 34
+    compileSdk = 36 // 👈 تم الرفع إلى 36 هنا
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -19,8 +19,8 @@ android {
         applicationId = "com.example.gamified_english_app"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = 21 // 👈 تم التعديل إلى 21 لتجنب أي مشاكل مع حزم الصوت والأيقونات
-        targetSdk = 34 // 👈 تم التعديل هنا إلى 34
+        minSdk = 21 
+        targetSdk = 36 // 👈 وتم الرفع إلى 36 هنا أيضاً
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
