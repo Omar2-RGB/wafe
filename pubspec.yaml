@@ -32,9 +32,11 @@ flutter:
     - assets/lessons.json
     - assets/images/
 
-# 👈 تم نقل إعدادات الأيقونة إلى هنا بشكل صحيح (خارج قسم flutter تماماً)
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/images/app_logo.png"
+  image_path: "assets/images/app_icon.png"
+  web:
+    generate: true
+    image_path: "assets/images/app_icon.png"
   min_sdk_android: 21

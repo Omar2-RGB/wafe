@@ -210,9 +210,11 @@ class _ExerciseViewState extends State<ExerciseView> {
                                     IconButton(
                                       icon: const Icon(Icons.volume_up_rounded, color: Color(0xFF1CB0F6), size: 48),
                                       onPressed: () async {
-                                        if (currentQuestion != null) {
-                                          await _flutterTts.stop();
-                                          await _flutterTts.speak(currentQuestion.text);
+                                        // ✅ التعديل الآمن الأول للـ Null Safety
+                                        final textToSpeak = currentQuestion?.text;
+                                        await _flutterTts.stop();
+                                        if (textToSpeak != null) {
+                                          await _flutterTts.speak(textToSpeak);
                                         }
                                       },
                                     ),
@@ -249,9 +251,11 @@ class _ExerciseViewState extends State<ExerciseView> {
                                               IconButton(
                                                 icon: const Icon(Icons.volume_up_rounded, color: Color(0xFF1CB0F6), size: 32),
                                                 onPressed: () async {
-                                                  if (currentQuestion != null && currentQuestion.text.isNotEmpty) {
+                                                  // ✅ التعديل الآمن الثاني للـ Null Safety
+                                                  final textToSpeak = currentQuestion?.text;
+                                                  if (textToSpeak != null && textToSpeak.isNotEmpty) {
                                                     await _flutterTts.stop();
-                                                    await _flutterTts.speak(currentQuestion.text);
+                                                    await _flutterTts.speak(textToSpeak);
                                                   }
                                                 },
                                               ),
